@@ -3,12 +3,12 @@ import { useState } from 'react'
 import { Dna } from 'react-loader-spinner';
 import './App.css'
 
-const API_KEY = "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";
 const systemMessage = {
   "role": "system", "content": "Explique moi comme si j'étais un adulte"
 }
 
 function App() {
+  const API_KEY = "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";
   const [error, setError] = useState('');
   const [response, setResponse] = useState('')
   const [isTyping, setIsTyping] = useState(false);
@@ -46,9 +46,6 @@ function App() {
         console.log(data);
         setResponse(data.choices[0].message.content);
         setIsTyping(false);
-      }).catch((err) => {
-        setError(err)
-        setIsTyping(false);
       })
   }
 
@@ -81,7 +78,7 @@ function App() {
               ariaLabel="dna-loading"
               wrapperStyle={{}}
               wrapperClass="dna-wrapper"
-            /></div> : response ? <p>{response}</p> : error ? <p>{error}</p> : null}
+            /></div> : response ? <p>{response}</p> : null}
       </div>
     </div>
   )
