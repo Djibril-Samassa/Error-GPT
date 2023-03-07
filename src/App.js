@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Dna } from 'react-loader-spinner';
 import './App.css'
 
-const API_KEY = "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";
+const API_KEY = "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";
 const systemMessage = {
   "role": "system", "content": "Explique moi comme si j'étais un développeur débutant"
 }
