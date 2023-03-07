@@ -6,7 +6,7 @@
   "action": {
     "default_title": "Error GPT By Djibril SAMASSA",
     "default_popup": "index.html",
-    "default_icons": {
+    "default_icon": {
       "16": "logo192.png",
       "128": "logo512.png"
     }

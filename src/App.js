@@ -57,6 +57,7 @@ function App() {
     <div className="App">
       <div className='form'>
         <h3>Error GPT</h3>
+        <p>Vous rencontrez un problème sur votre projet ? quel est l'erreur ? (ex: "undefined", "Bearer"..etc)</p>
         <form className='form'>
           <label for="error">Quelle erreur rencontrez vous ?</label>
           <input type="text" onChange={(e) => { handleWriteError(e) }} />
