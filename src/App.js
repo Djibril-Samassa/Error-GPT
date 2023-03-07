@@ -19,16 +19,16 @@ function App() {
       role: "user"
     };
     setIsTyping(true);
-    await processMessageToChatGPT(newMessage);
+    await envoyerAChatGpt(newMessage);
   };
 
-  async function processMessageToChatGPT(chatMessages) {
+  async function envoyerAChatGpt(message) {
 
     const apiRequestBody = {
       "model": "gpt-3.5-turbo",
       "messages": [
         systemMessage,
-        chatMessages
+        message
       ]
     }
 
