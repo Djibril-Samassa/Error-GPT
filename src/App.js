@@ -3,9 +3,9 @@ import { useState } from 'react'
 import { Dna } from 'react-loader-spinner';
 import './App.css'
 
-const API_KEY = "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";
+const API_KEY = "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";
 const systemMessage = {
-  "role": "system", "content": "Explique moi comme si j'étais un développeur débutant"
+  "role": "system", "content": "Explique moi comme si j'étais un adulte"
 }
 
 function App() {
@@ -46,7 +46,10 @@ function App() {
         console.log(data);
         setResponse(data.choices[0].message.content);
         setIsTyping(false);
-      });
+      }).catch((err) => {
+        setError(err)
+        setIsTyping(false);
+      })
   }
 
   const handleWriteError = (e) => {
@@ -78,7 +81,7 @@ function App() {
               ariaLabel="dna-loading"
               wrapperStyle={{}}
               wrapperClass="dna-wrapper"
-            /></div> : response ? <p>{response}</p> : null}
+            /></div> : response ? <p>{response}</p> : error ? <p>{error}</p> : null}
       </div>
     </div>
   )
